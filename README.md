@@ -3,6 +3,6 @@
 
 ## Research Project Participants:
 - Zoya Rahman: @zoyanashita
-- Abdul Rahem Ariff: @
+- Abdul Rahem Ariff: @absdul
 - Mario Alverenga: @orimaster-jumpman
 - Joshua Egwim: @

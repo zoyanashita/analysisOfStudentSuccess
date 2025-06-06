@@ -5,4 +5,4 @@
 - Zoya Rahman: @zoyanashita
 - Abdul Rahem Ariff: @absdul
 - Mario Alverenga: @orimaster-jumpman
-- Joshua Egwim: @
+- Joshua Egwim: @CatPhanta

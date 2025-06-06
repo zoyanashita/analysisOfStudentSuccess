@@ -1,5 +1,5 @@
 # Analyzing Crime Rate Factors
-## CMSC 330 - Intro to Data Science Final Project
+## CMSC 320 - Intro to Data Science Final Project
 
 ## Research Project Participants:
 - Zoya Rahman: @zoyanashita

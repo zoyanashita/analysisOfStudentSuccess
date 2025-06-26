@@ -8,4 +8,4 @@
 - Joshua Egwim: @CatPhanta
 
 # Dataset: 
-https://www.kaggle.com/datasets/adilshamim8/student-performance-and-learning-style
+https://www.kaggle.com/datasets/mahmoudelhemaly/students-grading-dataset

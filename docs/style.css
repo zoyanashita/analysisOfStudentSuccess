@@ -15,6 +15,14 @@ details summary {
     margin: var(--jp-content-heading-margin-top) 0 var(--jp-content-heading-margin-bottom) 0;          
 }
 
+.menu-container {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 1000;
+  width: 100%;
+  
+}
+
 .navbar {
      background-color: rgb(254, 246, 246);
      position: fixed;
@@ -22,9 +30,10 @@ details summary {
      left: 0;
      width: 100%;
      z-index: 1000;
-     font-size: large;
-     
+     font-size: medium;
+    
  }
+
 
  .navbar ul {
      list-style: none;
@@ -68,7 +77,7 @@ details summary {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 
   
-  flex-direction: column;
+  flex-direction: row;
   width: max-content;  
   z-index: 1000;
 }

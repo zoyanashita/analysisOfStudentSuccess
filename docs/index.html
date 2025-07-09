@@ -347,7 +347,7 @@
               was specifically designed to explore patterns, correlations, and insights regarding academic performance,
               which makes it perfect for our tutorial! It features 20+ columns, with noteable ones including
               Total_Score, Extracurricular_Activities, Parent_Education_Level, and even Stress_Level.</p>
-            <p>Before anything else, we must first we must begin with importing some libraries so that we can
+            <p>Before anything else, first we must begin with importing some libraries so that we can
               effectively process our data! This project is done using Google Colab and the Python Language. One of our
               most important libraries for data processing is Pandas, which we will import below along with some
               mathmatical/statistical libraries (numpy, spicy.stats, statsmodels, sklearn) and data visualization
@@ -409,7 +409,7 @@
             <br>
             <p>Once we finish our imports, it is time to begin organizing our data so that it is ready for analysis. The
               most effective way to do this is loading our csv file into a Pandas dataframe, and inspecting the columns!
-              Pandas is an incredibly useful library for for data manipulation and analysis, due to its high
+              Pandas is an incredibly useful library for data manipulation and analysis, due to its high
               performance, and user-friendly data structures & data analysis tools.</p>
             <p><a href="https://pandas.pydata.org/docs/getting_started/index.html">Learn more about Pandas here!</a></p>
           </div>
@@ -531,7 +531,7 @@
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <p>We can see that our data has no duplicate students, and that for the most part, we have almost no missing
-              values. Unfortuantely, we have 1025 mising data points for Parent Education Level, which is roughly 20% of
+              values. Unfortunately, we have 1025 missing data points for Parent Education Level, which is roughly 20% of
               the entire feature. <br />
               For now, we will take note of this to revisit in our exploratory analysis of what type of missing data
               this could be, and whether it is significant to impute on. In the meantime, we want to consider other data
@@ -1281,16 +1281,16 @@
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <h2 id="Analyzing-Missing-Values"><strong>Analyzing Missing Values</strong><a class="anchor-link"
                 href="#Analyzing-Missing-Values">¶</a></h2>
-            <p>There is roughly 20% missing data for Parent_Education_Level yet no missing data for any other feature.
+            <p>There is roughly 20% missing data for Parent_Education_Level.
               To quickly assess whether our data is MCAR (Missing Completely at Random) or MAR (Missing at Random), we
               can conduct a <strong>T test for numerical data and Chi-Squared Tests for categorical data.</strong> Both
-              of these tests will produce a p value that quantifies how likely either is. If p value is &gt;&gt; 0.05
+              of these tests will produce a p value that quantifies how likely either is. If p value is &gt; 0.05
               then MCAR is plausible, but if it is below, it is statistically significant enough to consider MAR. <br />
               <br />
               We can also use a <strong>heatmap</strong> to visualize if any of our t tests have especially low p
               values.
             </p>
-            <p><a href="https://www.shiksha.com/online-courses/articles/handling-missing-data-mean-median-mode/">Learn
+            <p><a href="https://www.geeksforgeeks.org/machine-learning/ml-handling-missing-values/">Learn
                 more about missing values here!</a></p>
           </div>
         </div>
@@ -3847,7 +3847,7 @@ First 5 predictions for Linear Regression:
               performed well, with a strong R² (0.992) and low MSE (0.025), but it did not exceed the performance of
               either SVR or Linear Regression. Decision Tree underperformed against all metrics, and was our least
               accurate model.</p>
-            <p>Overall: Linear Regression provided the highest classification accuracy, indicating that it was most
+            <p>Overall: Linear Regression provided the highest predictive accuracy, indicating that it was most
               reliable in predicting whether a student would be classified as “successful”, however, it did not perform
               as well in prediction of larger errors. SVR performed best in error-based metrics which shows that it is
               less likely to make large errors in predicting students’ exact success scores, causing us to reject our

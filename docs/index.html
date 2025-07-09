@@ -184,13 +184,34 @@
     <div class="navbar">
         <ul>
             <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#data-cur">Data Curation</a></li>
-            <li><a href="#eda">Exploratory Data Analysis</a></li>
-            <li><a href="#prim-viz">Primary Analysis</a></li>
+            <li class="dropdown">
+              <a href="#data-cur">Data Curation ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="#clean">Data Cleaning</a></li>
+              </ul>
+            </li>
+            <!-- <li><a href="#eda">Exploratory Data Analysis</a></li> -->
+            <li class="dropdown">
+              <a href="#eda" class="dropbtn">Exploratory Data Analysis ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="#missing">Missing Values</a></li>
+                <li><a href="#descriptive">Descriptive Testing</a></li>
+                <li><a href="#model">Model Testing</a></li>
+                <li><a href="#summary">Model Summary & Conclusions</a></li>
+                <li><a href="#recap">EDA Recap & Overview</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#prim-viz">Primary Analysis ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="#visualize">Visualization</a></li>
+              </ul>
+            </li>
             <li><a href="#insight">Insights & Conclusion</a></li>
             <li><a href="#contribution">Contributions</a></li>
         </ul>
     </div>
+
 
     <!-- Header Cell -->
     <section id="contribution"></section>
@@ -209,10 +230,10 @@
             <h2 id="CMSC-320---Intro-to-Data-Science-Final-Project" style="text-align: center;">Zoya Rahman, Abdul Rahem Ariff, Mario Alvarenga, Joshua Egwim<a class="anchor-link" href="#CMSC-320---Intro-to-Data-Science-Final-Project">¶</a></h2>
             <h2 id="Research-Project-Participants:">Contributions<a class="anchor-link"
                 href="#Research-Project-Participants:">¶</a></h2>
-            <h4>Note: Project was completed exclusively during in person sessions. The following contributions
-              illustrate what each member literally completed on their own laptops, however, every group member had
-              equal involvement and discussion participation for all portions of the project, regardless if explicitly
-              stated in any distinct section.</h4>
+            <h4>Note: Our project was completed exclusively during in person sessions. The following contributions
+              list what each member physically intiated and completed on their own laptops, however, every group member had
+              equal involvement and participation in discussion for all aspects of the project, regardless if explicitly
+              stated for any bolded section.</h4>
             <ul>
               <li><strong><b>Zoya Rahman:</b></strong> Developed the <b>Project Idea</b>, was in charge of making &
                 coordinating all tasks for Github
@@ -225,8 +246,7 @@
                   Design & Development</b>, contributed during code review & problem solving. For <b>Visualization
                   Result &
                   Analysis Conclusion</b>, contributed in conclusion & interpretation. For <b>Report Creation</b>,
-                created HTML file
-                from converted ipynb for website & managed github for deployment. </li>
+                converted the colab .ipynb file to .html for website, parsed css and html, edited website for accessibility, and managed github for deployment. </li>
               <br>
               <li><strong><b>Abdul Rahem Ariff:</b></strong> Filtered and selected ideal Dataset for project. For
                 <b>Data Exploration & Summary
@@ -240,8 +260,7 @@
                 visualization and implementation for Linear Regression. For <b>Visualization Result & Analysis
                   Conclusion</b>,
                 worked heavily on data visualization throughout project such as cleaning final plots, and contributed in
-                conclusion & interpretations for each model. For <b>Report Creation</b>, aided Zoya in report
-                development &
+                conclusion & interpretations for each model. For <b>Report Creation</b>, aided Zoya in information transfer &
                 cleaning converted html from ipynb.</li>
               <br>
               <li><strong><b>Mario Alvarenga:</b></strong> For <b>Dataset Curation & Preprocessing</b>, contributed in
@@ -272,31 +291,29 @@
         </div>
       </div>
     </div>
+   
 
     <!-- Introduction -->
     <section id="introduction"></section>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
-        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-        </div>
         <div class="jp-InputArea jp-Cell-inputArea">
           <div class="jp-InputPrompt jp-InputArea-prompt">
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <h1 id="Data-Collection" style="text-align: center;"><strong>Introduction</strong><a class="anchor-link" href="#Data-Collection">¶</a>
             </h1>
-            <p>Our project aims to determine and analyze what makes a Student Successful through the application of Machine Learning Models. Students nowdays have so many different facets of life to balance, and we wanted to develop a model that could intake various features relevant to a student's performance, and determine whether or not a student will be considered successful from that data. Our work is important in encouraging students towards specific habits and goals they should keep focus on to remain successful during their educational career! This tutorial allows for an easily accessible workflow from data cleaning to final interpretation, using a real life dataset from a professor and his roster of students!</p>
+            <p>Our project aims to determine and analyze what makes a Student Successful through the application of Machine Learning Models. Students nowdays have so many different facets of life to balance, and we wanted to develop a model that could intake various features relevant to a student's performance, and determine whether or not a student will be considered successful from that data. Our work is important for the encouragment of students towards specific habits and goals that they should keep focus on to remain successful during their educational career! This tutorial allows for an easily accessible workflow from data cleaning to final interpretation, using a real life dataset from a professor and his roster of students!</p>
           </div>
         </div>
       </div>
     </div>
 
+
     <!-- Data Curation -->
     <section id="data-cur"></section>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
-        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-        </div>
         <div class="jp-InputArea jp-Cell-inputArea">
           <div class="jp-InputPrompt jp-InputArea-prompt">
           </div>
@@ -317,6 +334,7 @@
       </div>
     </div>
     <!-- import cell!! -->
+    <details open> <summary>Hide Code ▾</summary>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -354,6 +372,7 @@
         </div>
       </div>
     </div>
+    </details>
     <!-- making Dataframe description-->
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -363,14 +382,15 @@
           <div class="jp-InputPrompt jp-InputArea-prompt">
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-            <p>Now we need to begin our data processing by organizing our csv into a Pandas dataframe and inspecting our
-              columns so we have a better understanding of what we are working with!</p>
+            <br><p>Once we finish our imports, it is time to begin organizing our data so that it is ready for analysis. The most effective way to do this is loading our csv file into a Pandas dataframe, and inspecting the columns! Pandas is an incredibly useful library for for data manipulation and analysis, due to its high performance, and user-friendly data structures & data analysis tools.</p>
+            <p><a href="https://pandas.pydata.org/docs/getting_started/index.html">Learn more about Pandas here!</a></p>
           </div>
         </div>
       </div>
     </div>
-    <!-- convering to df and making columns -->
+    <!-- convering to df and making columns cell -->
      <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -387,6 +407,7 @@
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -408,7 +429,8 @@
         </div>
       </div>
     </div>
-    <!-- Cleaning!!!-->
+    <!-- Data Cleaning!!! Header-->
+     <section id="clean"></section>
      <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -417,7 +439,8 @@
           <div class="jp-InputPrompt jp-InputArea-prompt">
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-            
+          <h2 id="Analyzing-Missing-Values"><strong>Data Cleaning</strong><a class="anchor-link"
+                href="#Analyzing-Missing-Values">¶</a></h2>
             <p>Now that we have an idea of our features, we should first begin with checking for major issues in our
               data. Even though our dataset is partially cleaned, it is best that we make sure to check for basic
               problems such as missing values across all columns and duplicate values for individuals data points. We
@@ -427,7 +450,9 @@
         </div>
       </div>
     </div>
+    <!-- missing values cell-->
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -450,6 +475,7 @@
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -465,6 +491,7 @@
         </div>
       </div>
     </div>
+    <!-- yay no duplicates!-->
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -486,7 +513,9 @@
         </div>
       </div>
     </div>
+    <!-- drop columns cell-->
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -506,6 +535,7 @@
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1066,6 +1096,7 @@
         </div>
       </div>
     </div>
+    <!-- time to make dependent variable !! -->
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -1085,7 +1116,9 @@
         </div>
       </div>
     </div>
+    <!-- curating Success_Score cell -->
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1110,6 +1143,7 @@
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1181,6 +1215,7 @@
       </div>
     </div>
 
+
     <!-- Exploratory Data Analysis -->
     <section id="eda"></section>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1193,17 +1228,17 @@
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <h1 id="Data-Processing" style="text-align: center;"><strong>Exploratory Data Analysis</strong><a class="anchor-link"
                 href="#Data-Processing">¶</a></h1>
-            <p>Since we have successfully completed our data preprocessing, it's time for us to begin analyzing our data
+            <p>Since we have successfully completed our data curation, it's time for us to begin exploring our data
               and understanding connections, so that we can draw conclusions for our hypothesis.</p>
             <p>We want to split our analysis into two distinct phases of testing: <strong>descriptive testing and
                 modeling testing.</strong> <br />
               But first, we should address our missing values from before!</p>
-            <h2 id="Analyzing-Missing-Values"><strong>Analyzing Missing Values</strong><a class="anchor-link"
-                href="#Analyzing-Missing-Values">¶</a></h2>
           </div>
         </div>
       </div>
     </div>
+    <!-- Missing Values Core-->
+    <section id="missing"></section>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -1212,6 +1247,8 @@
           <div class="jp-InputPrompt jp-InputArea-prompt">
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+             <h2 id="Analyzing-Missing-Values"><strong>Analyzing Missing Values</strong><a class="anchor-link"
+                href="#Analyzing-Missing-Values">¶</a></h2>
             <p>There is roughly 20% missing data for Parent_Education_Level yet no missing data for any other feature.
               To quickly assess whether our data is MCAR (Missing Completely at Random) or MAR (Missing at Random), we
               can conduct a <strong>T test for numerical data and Chi-Squared Tests for categorical data.</strong> Both
@@ -1221,11 +1258,13 @@
               We can also use a <strong>heatmap</strong> to visualize if any of our t tests have especially low p
               values.
             </p>
+            <p><a href="https://www.shiksha.com/online-courses/articles/handling-missing-data-mean-median-mode/">Learn more about missing values here!</a></p>
           </div>
         </div>
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1284,6 +1323,7 @@
           </div>
         </div>
       </div>
+    </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1335,11 +1375,13 @@ Internet_Access_at_Home   chi2 p = 0.236
               Education Level is MAR (Missing at Random). <br />
               Note that we are doing a univariate logistic regression test as Participation_Score is the only feature to
               have been remotely close to the threshold.</p>
+              <p><a href="https://www.geeksforgeeks.org/machine-learning/understanding-logistic-regression/">Learn more about Logistic Regression for Machine Learning here!</a></p>
           </div>
         </div>
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1359,6 +1401,7 @@ Internet_Access_at_Home   chi2 p = 0.236
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1397,13 +1440,14 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <p>With the LLR p-value being 0.0099, the model with Prediction_Score predicts missingness extremely well.
               Because an observed variable significantly predicts missingness, we can <strong>conclude that
-                Parent_Education_Level is Missing at Random</strong>. Below we have implemented a plot to show how the
-              Rate of Missingness changes across low to high participation using matplotlib.</p>
+                Parent_Education_Level is Missing at Random</strong>. Below we have implemented a box plot visualization to show how the
+              Rate of Missingness changes across low to high participation!</p>
           </div>
         </div>
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1432,6 +1476,7 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1471,6 +1516,7 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1495,6 +1541,7 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1509,6 +1556,8 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
         </div>
       </div>
     </div>
+    <!-- Descriptive Testing & Visualization Time!! -->
+    <section id="descriptive"></section>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -1519,21 +1568,20 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <h1 id="Descriptive-Testing-&amp;-Visualization"><strong>Descriptive Testing &amp; Visualization</strong><a
                 class="anchor-link" href="#Descriptive-Testing-&amp;-Visualization">¶</a></h1>
-            <p>For descriptive testing, we want to start exploring some of our features and their correlation to each
+            <p>Now that our missing values have successfully been imputed on, it is time to begin Descriptive Testing! Descriptive testing is when we want to start exploring some of our features and their correlation to each
               other, so that we can decide which features are most related to analyzing student success. To do this, we
-              will start by making a correlation matrix.</p>
+              will start by making a correlation matrix!</p>
             <br />
             A correlation matrix is a compact way of visualizing every pairwise linear relationship among a set of
             numeric variables in a table. Its incredibly useful for EDA (Exploratory Data Analysis) because it allows
-            for quick visualization of predictors that move together. It is also very useful for applications such as
+            for quick visualization of predictors that move together. It is also very useful for other applications such as
             Principal Component Analysis (PCA)!
-
-
           </div>
         </div>
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1561,6 +1609,7 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1595,6 +1644,7 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1621,6 +1671,7 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1660,13 +1711,12 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
             An ANOVA test analyzes the variability between and withing groups, to see if those differences are
             statistically significant. This is done with using group means! Here we are doing a "multi-way" test, where
             we analyze the unique effect of each of our features, while accounting for the others!
-
-
           </div>
         </div>
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1700,6 +1750,7 @@ Participation_Score    -0.0031      0.001     -2.576      0.010      -0.005     
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1744,6 +1795,8 @@ Residual                       14841.591773  4988.0       NaN       NaN
         </div>
       </div>
     </div>
+    <!-- Model Testing & Visualization !!-->
+    <section id="model"></section>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -1768,6 +1821,7 @@ Residual                       14841.591773  4988.0       NaN       NaN
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1817,6 +1871,7 @@ Residual                       14841.591773  4988.0       NaN       NaN
           </div>
         </div>
       </div>
+    </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -1873,6 +1928,7 @@ Residual                       14841.591773  4988.0       NaN       NaN
       </div>
     </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -1928,6 +1984,7 @@ Residual                       14841.591773  4988.0       NaN       NaN
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -2011,6 +2068,8 @@ Variance Inflation Factors
         </div>
       </div>
     </div>
+    <!-- Model Summary and Conclusions!! -->
+    <section id="summary"></section>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -2059,6 +2118,8 @@ Variance Inflation Factors
         </div>
       </div>
     </div>
+    <!-- Quick Recap!! -->
+    <section id="recap"></section>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -2067,44 +2128,37 @@ Variance Inflation Factors
           <div class="jp-InputPrompt jp-InputArea-prompt">
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-            <h1 id="Checkpoint-2-Requirements"><strong>Checkpoint 2 Requirements</strong><a class="anchor-link"
+            <h1 id="Checkpoint-2-Requirements"><strong>Recap of Everything So Far!</strong><a class="anchor-link"
                 href="#Checkpoint-2-Requirements">¶</a></h1>
+            <p> Before we move further, lets quickly go over everything we've already done to understand our data.</p>
             <h2 id="Data-Preprocessing"><strong>Data Preprocessing</strong><a class="anchor-link"
                 href="#Data-Preprocessing">¶</a></h2>
-            <p>For Import: pandas, numpy, matplot, seaborn, spicy.stats, statsmodels, and sklearn.</p>
-            <p>For Parse: Turning raw text columns into native types.<li>rename “Attendance (%)” to Attendance_Pct and
-                “Stress_Level (1-10)” to Stress_Level
-              <li>created miss_PE and Part_High as integer/boolean flags
-              <li> binned participation into quartiles and later into a high/low Boolean for single-imputation
-              <li> dropped ID/name/email columns</li>
-              </li>
-              </li>
-              </li>
+            <p>We imported various libraries such as pandas, numpy, matplot, seaborn, spicy.stats, statsmodels, and sklearn.</p>
+            <p>We began parsing through turning raw text columns into native types, renamed “Attendance (%)” to Attendance_Pct and “Stress_Level (1-10)” to Stress_Level, created miss_PE and Part_High as integer/boolean flags, binned participation into quartiles and later into a high/low Boolean for single-imputation and dropped ID, name and email columns
             </p>
-            <p>For Organize: clean DataFrame, z-scored three Success inputs, dropped extras, and created a single
-              Success_Score.</p>
+            <p>We also organized our data by cleaning the DataFrame, z-scoring three Success inputs, dropping extras, and creating a single Success_Score.</p>
             <h2 id="Basic-Data-Exploration-&amp;-Summary-Statistics"><strong>Basic Data Exploration &amp; Summary
                 Statistics</strong><a class="anchor-link" href="#Basic-Data-Exploration-&amp;-Summary-Statistics">¶</a>
             </h2>
-            <p>For Statistical Methods:</p>
-            <li> Missing-data analysis (t-tests + χ²) + heatmap &amp; barplot for Hypothesis test that Parent_Edu is
+            <p>We utilized various Statistical Methods for:</p>
+            <li> Missing-data analysis (t-tests + χ²) and visualization using heatmap &amp; barplots for our Hypothesis test that Parent_Edu is
               MAR.
-            <li> Correlation analysis (Pearson matrix + pairplot) + heatmap &amp; scatter matrix for identifying top
+            <li> Correlation analysis (Pearson matrix + pairplot) and visualization with a scatter matrix for identifying top
               numeric predictors.
-            <li>Categorical analysis (ANOVA + boxplots) + multiway ANOVA table &amp; boxplots for finding categorical
+            <li>Categorical analysis (ANOVA + boxplots) and visualization with a multiway ANOVA table &amp; boxplots for finding the categorical
               driver.
-            <li>Simple regressions (regplots) + three red line scatterplots to determine strongest linear predictor.
-            <li> Full OLS model + diagnostics plus summary table, VIFs, residual plots allowed for R²/R²adj, coefficient
+            <li>Simple regressions (regplots) + three red line scatterplots to determine our strongest linear predictor.
+            <li> Full OLS model and diagnostics plus a summary table, VIFs, residual plots allowed for R²/R²adj, coefficient
               interpretations, and collinearity check.
-
-              <p>For Three (of many) Conclusions:</p>
+              <br></br>
+              <p>We reached many conclusions, a few of which being:</p>
             <li>Participation_Score significantly predicts missing Parent_Education Level (p≈0.008), therefore it is
               Missing At Random (MAR).
             <li>Total_Score, Midterm, Project Score (r≈0.6) &amp; Sleep Hours (r≈0.58) all correlate strongly with
               Success_Score.
             <li>OLS: every point in Total_Score adds ~0.14 to Success_Score, and having only High School educated
               parents knocks you down ~0.14 (all else equal).
-            <li>Bonus: ANOVA shows no significant categorical effects on Success_Score (all p&gt;0.05).
+            <li>ANOVA shows no significant categorical effects on Success_Score (all p&gt;0.05).
 
 
             </li>
@@ -2120,6 +2174,7 @@ Variance Inflation Factors
         </div>
       </div>
     </div>
+
 
     <!-- Primary Analysis -->
     <section id="prim-viz"></section>
@@ -2133,23 +2188,26 @@ Variance Inflation Factors
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <h1 id="Data-Processing" style="text-align: center;"><strong>Primary Analysis &amp; Visualization</strong><a class="anchor-link"
                 href="#Data-Processing">¶</a></h1>
-            <p>Before we begin applying models to our data, the first thing we need to is form a hypothesis.</p>
-            <p>Base on our prior knowledge and our findings, we can assume the best model for our dataset would be
-              Random Forest. Random Forrest is typically used when we have multiple categorical and numeric features,
-              however our previous conclusion showed us pur categorical features are irrelevant to our analysis.
-              Therefore we are only going to be using our numerical features to train and test our model. We still
+            <p>Now that we have finished exploring our data, it is time to being our primary analysis! Before we begin applying models to our data, the first thing we need to is form a hypothesis.</p>
+            <p>Base on our findings, we can assume the best model for our dataset would be
+              Random Forest. Random Forest is a Machine Learning Model that is typically used when we have multiple categorical and numeric features.
+              However, our previous conclusion showed us pur categorical features are irrelevant to our analysis,
+            therefore we are only going to be using our numerical features to train and test our model. We still
               believe Random Forest will be the best because its robust to overfitting and help us capture nonlinear
-              relationships and more complex patterns. It typically has the best performance compared to other models
+              relationships and more complex patterns. It still typically has the best performance compared to other models
               when working on real datasests that have been cleaned out and only contain numerical features.</p>
+            <p> To test our hypothesis, we will be comparing Random Forest with other models that both tend to perform well on numerical data and are common models we have gone over in class. For this comparison, we will be using Decision Tree and Support Vector Regression</p>
             <p>Models such as K-nearest neigbor and K-means clustering would not work due to them being unsupervised
               machine learning models whereas our data has labels which we would want to use superivised algorithms to
               predict the success score of new students.</p>
-            <p>We also included Support Vector Regression (SVR) in the dictionary which was not covered much in the
-              material since its for predicting continuos variables and might work well with our data.</p>
+            <p>Note: we included Support Vector Regression (SVR) in the dictionary which was not covered much in the
+              material since its good for predicting continuos variables and might work well with our data.</p>
+            <p><a href="https://www.geeksforgeeks.org/machine-learning/random-forest-algorithm-in-machine-learning/">Learn more about Random Forest here!</a></p>
           </div>
         </div>
       </div>
     </div>
+    <details open> <summary>Hide Code ▾</summary>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -2173,6 +2231,7 @@ Variance Inflation Factors
         </div>
       </div>
     </div>
+    </details>
     <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -2181,12 +2240,13 @@ Variance Inflation Factors
           <div class="jp-InputPrompt jp-InputArea-prompt">
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-            <h1 id="But-First,">But First,<a class="anchor-link" href="#But-First,">¶</a></h1>
-            <p>we need to scale and split our data before training in order for effective results.</p>
+            <p>Before we begin appling models to our data, we need to scale and split our data before training. This ensures effective results in two ways: 1) scaled data allows for more consistent results across our models and 2) splitting data ensures that we can measure performance data that was not involved in training, for a more accurate assessment. Here we can quickly scale and split our data using the sklearn library's StandardScaler() and train_test_split() functions.</p>
+            <p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">Learn more about train_test_split here!</a></p>
           </div>
         </div>
       </div>
     </div>
+    <details open> <summary>Hide Code ▾</summary>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -2214,7 +2274,23 @@ Variance Inflation Factors
         </div>
       </div>
     </div>
+    </details>
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">
+          </div>
+          <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+            <p>Now that we have split our data, we want to introduce folds. This is essentially a cross validation technique, where we split our data into distinct folds, fit the model on each train fold, evaluate it on a corresponding test fold, and receive a metric of the cross-validated accuracy. This encourages stability, fair comparison, and helps prevent overfitting on our model, and is essential for compaing multiple models in a reproducible and unbiased manner!</p>
+            <p><a href="https://www.geeksforgeeks.org/machine-learning/k-fold-cross-validation-in-machine-learning/">Learn more about k-fold here!</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -2224,7 +2300,7 @@ Variance Inflation Factors
             <div class="cm-editor cm-s-jupyter">
               <div class="highlight hl-python">
                 <pre><span></span><span class="n">kfolds</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">skf</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="n">kfolds</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+
 <span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="n">kfolds</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
   <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
@@ -2241,6 +2317,7 @@ Variance Inflation Factors
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -2263,7 +2340,26 @@ Cross-validated Accuracy: 0.9908235949762073 (+/- 0.0007330670255108539)
         </div>
       </div>
     </div>
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">
+          </div>
+          <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+            <p>Now that we have our cross-validation accuracy, we can see that our coefficident of determination is extremely close to 1, with the highest accuracy being SVR at 99.4% accurate! </p>
+            <section id="visualize"></section>
+              <h2 id="Analyzing-Missing-Values"><strong>Visualization</strong><a class="anchor-link"
+                href="#Analyzing-Missing-Values">¶</a></h2>
+            <p>Since we have completed our k folds and determined accuracy, we want to visualize our models against a regression line to show the predictions against true values. We already have R² for accuracy, but we also want a metric for error. We will be using Mean Squared Error, a measure that evaluates the performance of a model in regression tasks by assessing the average squared differene between predicted and actual values </p>
+            <p><a href="https://www.geeksforgeeks.org/maths/mean-squared-error/">Learn more about Mean Squared Error here!</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -2307,6 +2403,7 @@ Cross-validated Accuracy: 0.9908235949762073 (+/- 0.0007330670255108539)
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -2335,7 +2432,21 @@ Cross-validated Accuracy: 0.9908235949762073 (+/- 0.0007330670255108539)
         </div>
       </div>
     </div>
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">
+          </div>
+          <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+            <p>Additionally, we've included the first 5 predictions of each model, just so we can actually see what's being produced! </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -2360,6 +2471,7 @@ Cross-validated Accuracy: 0.9908235949762073 (+/- 0.0007330670255108539)
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -3204,7 +3316,22 @@ First 5 predictions for RandomForest:
         </div>
       </div>
     </div>
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">
+          </div>
+          <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+            <p>Finally, we want to compare all of our models to a Linear Regression Model. We want to do this because our model is entire based on regression features, and our dependent variable is constructed based on those features. Based on this logic, a Linear Regression model should hold perfect accuracy, making it a good metric to compare against for our other models! </p>
+            <a href="https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/">Learn more about Linear Regression in Machine Learning here!</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -3248,6 +3375,7 @@ First 5 predictions for RandomForest:
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -3262,7 +3390,21 @@ First 5 predictions for RandomForest:
         </div>
       </div>
     </div>
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+        </div>
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-InputPrompt jp-InputArea-prompt">
+          </div>
+          <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+            <p>And we have also included the first 5 predictions below for your viewing pleasure :) </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+      <details open> <summary>Hide Code ▾</summary>
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -3285,6 +3427,7 @@ First 5 predictions for RandomForest:
           </div>
         </div>
       </div>
+      </details>
       <div class="jp-Cell-outputWrapper">
         <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
         </div>
@@ -3572,9 +3715,10 @@ First 5 predictions for Linear Regression:
       </div>
     </div>
 
+    
     <!-- Insight & Conclusion  -->
     <section id="insight"></section>
-    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+    <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" style="margin-bottom: 20px;">
       <div class="jp-Cell-inputWrapper" tabindex="0">
         <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
         </div>
@@ -3584,15 +3728,35 @@ First 5 predictions for Linear Regression:
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <h1 id="Data-Collection" style="text-align: center;"><strong>Insights &amp; Conclusions</strong><a class="anchor-link" href="#Data-Collection">¶</a>
             </h1>
-            <h3 id="Dataset:">Dataset:<a class="anchor-link" href="#Dataset:">¶</a></h3>
-            <p><a
-                href="https://www.kaggle.com/datasets/mahmoudelhemaly/students-grading-dataset">https://www.kaggle.com/datasets/mahmoudelhemaly/students-grading-dataset</a>
-            </p>
-            <p>Yap yap Yap YAP!!.</p>
+            <p>Finally, it is time to being reviewing all of our analysis and discuss our conclusions!</p>
+            <p>In our analysis, we set out to predict student success using three machine learning algorithms: Support Vector Regression (SVR), Decision Tree Regression, and Random Forest. We then used Linear Regression to compare all of them as this is a regression model with a linear pattern, as we initially believed that linear regression would be the highest due to our dataset's nature and construction of the Success_Score metric, making it the perfect comparison. Based on our prior experience and hypothesis, we expected Random Forest to outperform the other models due to its capability with handling larger datasets, robustness against overfitting and overall ability to capture complex feature interactions. Although random forest is known for its accuracy in utilizing both numerical and categorical features, our categorical features proved to be irrelevant in our data (shown in correlation matrix), so we removed this factor but still hypothesized Random Forest to retain the best accuracy due to its heavy use in real life numerical datasets.</p>
+            <p>However, after training and evaluating all models, our results tell a different story. Surprisingly, Random Forest did not outperform the other two algorithms. While it performed well and showed high predictive capability, it was ultimately outclassed by both Support Vector Regression and Linear Regression. The Random Forest model retained strong accuracy, but it fell short in terms of minimizing prediction error (MSE), due to a higher value, and explaining the variance in our data (R²), due to underperforming against SVR.</p>
+            <p>Despite Linear Regression's lead in accuracy, SVR slightly surpassed it when comparing the R² and Mean Squared Error (MSE) metrics. SVR achieved the highest R² value (0.995) and the lowest MSE (0.017), indicating it was slightly better at minimizing error and explaining the variance in the data, possibly because it can capture subtle non-linear patterns that linear regression may miss. Random Forest also performed well, with a strong R² (0.992) and low MSE (0.025), but it did not exceed the performance of either SVR or Linear Regression. Decision Tree underperformed against all metrics, and was our least accurate model</p>
+            <p>Overall: Linear Regression provided the highest classification accuracy, indicating that it was most reliable in predicting whether a student would be classified as “successful”, however, it did not perform as well in prediction of larger errors. SVR performed best in error-based metrics which shows that it is less likely to make large errors in predicting students’ exact success scores, causing us to reject our initial hypothesis of Random Forest being our best model of the three. While Linear Regression still retains the highest accuracy as hypothesized, SVR's outperformance regarding error based metrics makes it the most accurate model overall for continuous predictions in our study. </p>
+            <p>In real world practice, our model can be applied by schools, advisors, or academic support services to identify students who will perform less successfully. Schools may input current data, such as total academic score, reported sleeping habits, and stress level into our model in order to make predictions about which students will perform well and which students will require special intervention or not. This can help the professor, counselor, and school better understand what the student needs in order to improve their chances of being successful. </p>
+            <p><a href="https://www.nature.com/articles/s41599-025-04698-y">For more information regarding the relationship of academic stress and student wellbeing, click here!</a></p>
+            <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10875422/">For interest in other studies exploring factors shaping academic success, click here!</a></p>
+            <p><a href="https://www.researchgate.net/publication/349223588_Success_factors_at_university_from_students'_perspective">For a study considering success factors from a student based perspective, click here!</a></p>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" style="margin-bottom: 20px;">
+      <div class="jp-Cell-inputWrapper" tabindex="0">
+        <div class="jp-InputArea jp-Cell-inputArea">
+          <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+            <p>
+            Access the project files here:
+          <a href="https://github.com/zoyanashita/analysisOfStudentSuccess">Github</a> | Summer 2025 Data Science Project: <a href="https://github.com/zoyanashita">Zoya</a>, <a href="https://github.com/Absdul">Abdul Rahem</a>, <a href="https://github.com/orimaster-jumpman">Mario</a>, <a href="https://github.com/CatPhanta">Joshua</a>
+        </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
   </main>
 </body>
 

@@ -2,28 +2,29 @@
      scroll-behavior: smooth;
  }
 
-details summary {
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
-  background-color:#faebeb;
-  list-style: none;            
-  user-select: none;
-    line-height: var(--jp-content-heading-line-height);
-    font-weight: var(--jp-content-heading-font-weight);
-    font-style: normal;
-    font-size: 1rem;
-    margin: var(--jp-content-heading-margin-top) 0 var(--jp-content-heading-margin-bottom) 0;          
-}
+ details summary {
+     padding: 0.5em 1em;
+     border-radius: 0.25em;
+     background-color: #faebeb;
+     list-style: none;
+     user-select: none;
+     line-height: var(--jp-content-heading-line-height);
+     font-weight: var(--jp-content-heading-font-weight);
+     font-style: normal;
+     font-size: 1rem;
+     margin: var(--jp-content-heading-margin-top) 0 var(--jp-content-heading-margin-bottom) 0;
+ }
 
-.menu-container {
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 1000;
-  width: 100%;
-  
-}
+ .menu-container {
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1000;
+     width: 100%;
 
-.navbar {
+ }
+
+ .navbar {
      background-color: rgb(254, 246, 246);
      position: fixed;
      top: 0;
@@ -31,9 +32,8 @@ details summary {
      width: 100%;
      z-index: 1000;
      font-size: medium;
-    
- }
 
+ }
 
  .navbar ul {
      list-style: none;
@@ -45,14 +45,14 @@ details summary {
  .navbar ul li {
      float: left;
      margin: 0 10px;
-     
+
  }
 
  .navbar ul li a {
      display: block;
      padding: 15px 10px;
      text-decoration: none;
-     
+
  }
 
  .navbar ul li a:hover {
@@ -61,40 +61,41 @@ details summary {
      cursor: alias;
  }
 
-.navbar ul li.dropdown {
-  position: relative;
-}
+ .navbar ul li.dropdown {
+     position: relative;
+ }
 
-.navbar ul li.dropdown .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;    
-  left: 0;
-  background: #faebeb;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+ .navbar ul li.dropdown .dropdown-content {
+     display: none;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     background: #faebeb;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
-  
-  flex-direction: row;
-  width: max-content;  
-  z-index: 1000;
-}
 
-.navbar ul li.dropdown:hover .dropdown-content {
-  display: flex;
-}
+     flex-direction: row;
+     width: max-content;
+     z-index: 1000;
+ }
 
-/* dropdown links */
-.navbar ul li.dropdown .dropdown-content li a {
-  display: block;
-  padding: 0.5em 1em;
-  white-space: nowrap;
-}
-.navbar ul li.dropdown .dropdown-content li a:hover {
-  color: red;
-}
+ .navbar ul li.dropdown:hover .dropdown-content {
+     display: flex;
+ }
+
+ /* dropdown links */
+ .navbar ul li.dropdown .dropdown-content li a {
+     display: block;
+     padding: 0.5em 1em;
+     white-space: nowrap;
+ }
+
+ .navbar ul li.dropdown .dropdown-content li a:hover {
+     color: red;
+ }
 
  #contribution {
      padding-top: 15px;
@@ -108,52 +109,66 @@ details summary {
  #data-cur {
      scroll-margin-top: 35px;
  }
+
  #eda {
      scroll-margin-top: 35px;
  }
+
  #prim-viz {
      scroll-margin-top: 35px;
  }
+
  #insight {
      scroll-margin-top: 35px;
  }
+
  #missing {
      scroll-margin-top: 45px;
  }
+
  #descriptive {
      scroll-margin-top: 45px;
  }
+
  #model {
      scroll-margin-top: 45px;
  }
+
  #summary {
      scroll-margin-top: 45px;
  }
+
  #recap {
      scroll-margin-top: 45px;
  }
+
  #clean {
      scroll-margin-top: 45px;
  }
+
  #visualize {
      scroll-margin-top: 45px;
  }
- .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 25px;
-  background-color: rgb(254, 246, 246);
-  padding: 10px 0;
-  font-size: 1rem;
-  font-style: normal;
-}
 
-.footer p {
-  text-align: left;
-  padding-left: 8px;
-}
+ .footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 25px;
+     background-color: rgb(254, 246, 246);
+     padding: 10px 0;
+     font-size: 1rem;
+     font-style: normal;
+ }
+
+ .footer p {
+     text-align: left;
+     padding-left: 8px;
+ }
+
+
+/* IPYNB CONVERSION TO HTML CSS RULES, UNMODIFIED BY ME */
  pre {
      line-height: 125%;
  }
@@ -4530,7 +4545,7 @@ better solution to this problem.
      line-height: normal;
      white-space: normal;
      max-width: none;
-     border: none;   
+     border: none;
  }
 
  :not(.jp-RenderedMarkdown).jp-RenderedHTMLCommon td,

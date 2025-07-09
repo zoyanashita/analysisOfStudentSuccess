@@ -1851,9 +1851,8 @@ Residual                       14841.591773  4988.0       NaN       NaN
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <h1 id="Model-Testing-&amp;-Visualization"><strong>Model Testing &amp; Visualization</strong><a
                 class="anchor-link" href="#Model-Testing-&amp;-Visualization">¶</a></h1>
-            <p>For model testing, we want to choose between regression &amp; classification. Since our Success_Score is
-              numerical, we want to use regression, and since our pairplots showed linear trends in data, we can chose
-              to begin our modeling with Linear Regression! <br /> We're first going to just check the linear regression
+            <p>For model testing, we can choose between regression or classification. Since our Success_Score is
+              numerical, we want to use regression, and since our pairplots showed linear trends in data, we will begin with Linear Regression! <br /> We're first going to just check the linear regression
               against the values we used to make the Success_Score</p>
             <br />
             Linear Regression allows us to visualize the relationships between each factor and the Success Score, to
@@ -1959,7 +1958,7 @@ Residual                       14841.591773  4988.0       NaN       NaN
               will be fitting an <strong>OLS (Ordinary Least Squares)</strong> to determine the set of coefficients that
               minimizes our residuals. It essentially allows us to see how each predictor shifts the outcome. <br />
               Whenever choosing to fit OLS, you want to inspect a few key features afterwards, specifically,
-              <strong>Linearity (are there residuals or is it fitted), The Spread of Residuals, Normality and
+              <strong>Linearity (are there residuals or is it fitted), The Spread of Residuals, Normality, and
                 Colinearity.</strong> We will create diagnosis plots for these and interrpret the results according.
             </p>
             <br />
@@ -2126,7 +2125,7 @@ Variance Inflation Factors
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <h2 id="Model-Summary-and-Conclusions"><strong>Model Summary and Conclusions</strong><a class="anchor-link"
                 href="#Model-Summary-and-Conclusions">¶</a></h2>
-            <p>From our <strong>OLS</strong> application, we can see that our R^2 value is 0.341, meaning that our
+            <p>From our <strong>OLS</strong> application, we can see that our R² value is 0.341, meaning that our
               predictors explain 34% of the variance in Success_Score. And our F-Statistic: 161.3 with a probability
               &lt; 0.01, show that <strong>our predictors are highly significant in explaining the
                 Success_Score.</strong> <br />
@@ -2156,7 +2155,7 @@ Variance Inflation Factors
               <br /><br />
               Finally, for the <strong>QQ plot of residuals (Normality)</strong>, we typically aim for a tight
               attachment along the angle, however in this case we have tight attachment only in the middle, with the
-              ends bending away. This indicates that we have some extreme residuals than a normal distribution, which
+              ends bending away. This indicates that we have more extreme residuals than a normal distribution, which
               aligns with our previous conclusion that <strong>we have slightly heavy tail behavior, which is a signal
                 of a few extreme cases, but not of significant concern due to our large n of 5000.</strong>
             </p>
@@ -2184,7 +2183,7 @@ Variance Inflation Factors
             <p>We began parsing through turning raw text columns into native types, renamed “Attendance (%)” to
               Attendance_Pct and “Stress_Level (1-10)” to Stress_Level, created miss_PE and Part_High as integer/boolean
               flags, binned participation into quartiles and later into a high/low Boolean for single-imputation and
-              dropped ID, name and email columns
+              dropped ID, name, and email columns
             </p>
             <p>We also organized our data by cleaning the DataFrame, z-scoring three Success inputs, dropping extras,
               and creating a single Success_Score.</p>
@@ -2250,7 +2249,7 @@ Variance Inflation Factors
               categorical and numeric features.
               However, our previous conclusion showed us our categorical features are irrelevant to our analysis,
               therefore we are only going to be using our numerical features to train and test our model. We still
-              believe Random Forest will be the best because its robust to overfitting and help us capture nonlinear
+              believe Random Forest will be the best because its robust to overfitting and helps us capture nonlinear
               relationships and more complex patterns. It still typically has the best performance compared to other
               models
               when working on real datasests that have been cleaned out and only contain numerical features.</p>
@@ -2258,7 +2257,7 @@ Variance Inflation Factors
               well on numerical data and are common models we have gone over in class. For this comparison, we will be
               using Decision Tree and Support Vector Regression</p>
             <p>Models such as K-nearest neigbor and K-means clustering would not work due to them being unsupervised
-              machine learning models whereas our data has labels which we would want to use superivised algorithms to
+              machine learning models. Because our data is already labeled, we will be using superivised learning algorithms to
               predict the success score of new students.</p>
             <p>Note: we included Support Vector Regression (SVR) in the dictionary which was not covered much in the
               material since its good for predicting continuos variables and might work well with our data.</p>
@@ -2329,7 +2328,7 @@ Variance Inflation Factors
                   <pre><span></span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span>
 <span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'Total_Score'</span><span class="p">,</span> <span class="s1">'Midterm_Score'</span><span class="p">,</span> <span class="s1">'Final_Score'</span><span class="p">,</span> <span class="s1">'Assignments_Avg'</span><span class="p">,</span> <span class="s1">'Quizzes_Avg'</span><span class="p">,</span> <span class="s1">'Participation_Score'</span><span class="p">,</span> <span class="s1">'Stress_Level'</span><span class="p">,</span> <span class="s1">'Attendance_Pct'</span><span class="p">,</span> <span class="s1">'Study_Hours_per_Week'</span><span class="p">,</span> <span class="s1">'Projects_Score'</span><span class="p">,</span> <span class="s1">'Sleep_Hours_per_Night'</span><span class="p">]]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'Total_Score'</span><span class="p">,</span> <span class="s1">'Midterm_Score'</span><span class="p">,</span> <span class="s1">'Final_Score'</span><span class="p">,</span> <span class="s1">'Assignments_Avg'</span><span class="p">,</span> <span class="s1">'Quizzes_Avg'</span><span class="p">,</span> <br><span class="s1">'Participation_Score'</span><span class="p">,</span> <span class="s1">'Stress_Level'</span><span class="p">,</span> <span class="s1">'Attendance_Pct'</span><span class="p">,</span> <span class="s1">'Study_Hours_per_Week'</span><span class="p">,</span> <span class="s1">'Projects_Score'</span><span class="p">,</span> <span class="s1">'Sleep_Hours_per_Night'</span><span class="p">]]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Success_Score'</span><span class="p">]</span>
 
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
@@ -2356,7 +2355,7 @@ Variance Inflation Factors
             <p>Now that we have split our data, we want to introduce folds. This is essentially a cross validation
               technique where we split our data into distinct folds, fit the model on each train fold, evaluate it on a
               corresponding test fold, and receive a metric of the cross-validated accuracy. This encourages stability,
-              fair comparison and helps prevent overfitting on our model, and is essential for compaing multiple models
+              fair comparison and helps prevent overfitting on our model. It is essential for comparing multiple models
               in a reproducible and unbiased manner!</p>
             <p><a
                 href="https://www.geeksforgeeks.org/machine-learning/k-fold-cross-validation-in-machine-learning/">Learn
@@ -3412,7 +3411,7 @@ First 5 predictions for RandomForest:
           </div>
           <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
             <p>Finally, we want to compare all of our models to a Linear Regression Model. We want to do this because
-              our model is entire based on regression features, and our dependent variable is constructed based on those
+              our model is entirely based on regression features, and our dependent variable is constructed based on those
               features. Based on this logic, a Linear Regression model should hold perfect accuracy, making it a good
               metric to compare against for our other models! </p>
             <a href="https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/">Learn more about Linear
@@ -3825,11 +3824,11 @@ First 5 predictions for Linear Regression:
             <p>Finally, it is time to begin reviewing all of our analysis and discuss our conclusions!</p>
             <p>In our analysis, we set out to predict student success using three machine learning algorithms: Support
               Vector Regression (SVR), Decision Tree Regression, and Random Forest. We then used Linear Regression to
-              compare all of them as this is a regression model with a linear pattern, as we initially believed that
-              linear regression would be the highest due to our dataset's nature and construction of the Success_Score
-              metric, making it the perfect comparison. Based on our prior experience and hypothesis, we expected Random
+              compare all of them, as we initially believed that
+              linear regression would have the highest predictive accuracy due to our dataset's nature and construction of the Success_Score
+              metric. Based on our prior experience and hypothesis, we expected Random
               Forest to outperform the other models due to its capability with handling larger datasets, robustness
-              against overfitting and overall ability to capture complex feature interactions. Although random forest is
+              against overfitting and overall ability to capture complex feature interactions. Although Random Forest is
               known for its accuracy in utilizing both numerical and categorical features, our categorical features
               proved to be irrelevant in our data (shown in correlation matrix), so we removed this factor but still
               hypothesized Random Forest to retain the best accuracy due to its heavy use in real life numerical
